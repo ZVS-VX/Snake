@@ -37,6 +37,9 @@
   let score = 0;
 
   let highScore = JSON.parse(localStorage.snakeHS1)
+  if (highScore == undefined || highScore == 0) {
+  highScore = 0
+  }
 
   let drawBorder = function () {
     ctx.fillStyle = "black";
