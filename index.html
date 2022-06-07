@@ -36,11 +36,6 @@
 
   let score = 0;
 
-  let highScore = JSON.parse(localStorage.snakeHS1)
-  if (highScore == undefined || highScore == 0) {
-  highScore = 0
-  }
-
   let drawBorder = function () {
     ctx.fillStyle = "black";
     ctx.fillRect(0, 0, width, blockSize);
@@ -247,9 +242,6 @@
     snake.draw();
     apple.draw();
     drawBorder();
-    if (highScore < score) {
-      localStorage.snakeHS1 = score
-    }
   }
   }, 100);
 
